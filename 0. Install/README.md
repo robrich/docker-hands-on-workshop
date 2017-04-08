@@ -29,8 +29,8 @@ Windows
 5. Gratuitous reboots.
 
 
-VMWare
-------
+Docker in a VMWare VM
+---------------------
 
 See [this post](https://communities.vmware.com/thread/498837) to get a VMware virtual machine to run Docker.  This assumes you've enabled virtualiztion on the host's bios so you can run VMware.
 
