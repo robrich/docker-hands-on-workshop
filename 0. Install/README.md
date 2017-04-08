@@ -18,7 +18,7 @@ Windows
 
 ![Windows Install](windows.gif)
 
-2. Install [Hyper-V] from Start -> Control Panel -> Programs and Features -> Turn Windows Features on or off.
+2. Install `Hyper-V` from Start -> Control Panel -> Programs and Features -> Turn Windows Features on or off.
 
 ![Hyper-V](hyperv.png)
 
