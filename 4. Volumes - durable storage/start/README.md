@@ -13,7 +13,7 @@ Setup
 The problem
 -----------
 
-1. Launch the container: `docker run -p 3000:3000 volumetest:0.1`
+1. Launch the container: `docker run -p 3000:3000 -d volumetest:0.1`
 
 2. Did you get a port in use error?  Run `docker container list` and stop any other containers running on this port.
 
@@ -23,7 +23,7 @@ The problem
 
 5. Stop the container with `docker container list` and `docker container stop ...` substituting the container name or id for `...`.
 
-6. Start the container again: `docker run -p 3000:3000 volumetest:0.1`
+6. Start the container again: `docker run -p 3000:3000 -d volumetest:0.1`
 
 7. Click on [See files](http://localhost:3000/files).
 
