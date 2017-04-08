@@ -81,4 +81,4 @@ Step 6: Change the code, rebuild, rerun
 
 5. Run a `docker container stop` command to stop the container.
 
-6. Run a `docker container ps` command to remove the container.
+6. Run a `docker container rm` command to remove the container.
