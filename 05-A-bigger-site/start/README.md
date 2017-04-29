@@ -34,7 +34,7 @@ I have here a .net core back-end and a node front-end.  Use my app, and build an
 
 6. Run `docker container inspect --format "{{ .NetworkSettings.IPAddress }}" ...` replacing `...` with the container id or name to get the IP address of the back-end container.
 
-7. Open `frontend/routes/index.js` and change the IP address on line 6 with the IP address of the back-end container.
+7. Open `frontend/routes/index.js` and change the IP address on line 6 with the IP address of the back-end container, keeping the `http://` and `:5000`.
 
 8. `docker build ...` the front-end container.
 
