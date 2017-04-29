@@ -15,13 +15,15 @@ Step 0: Switch to Linux containers
 Step 1: Build the app
 ---------------------
 
-1. Go to [nodejs.org](https://nodejs.org/en/about) and click on "About"
+1. Create a blank directory and open a terminal in that directory
 
-2. Copy the sample program
+2. Go to [nodejs.org](https://nodejs.org/en/about) and click on "About"
 
-3. Paste into a new file called `server.js`
+3. Copy the sample program
 
-4. Modify this line: `server.listen(port, hostname, () => {` to this: `server.listen(port, () => {` (e.g. remove `hostname`.)
+4. Paste into a new file called `server.js`
+
+5. Modify this line: `server.listen(port, hostname, () => {` to this: `server.listen(port, () => {` (e.g. remove `hostname`.)
 
 
 Step 2: Craft the Dockerfile
