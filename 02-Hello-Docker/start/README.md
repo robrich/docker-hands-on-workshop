@@ -31,7 +31,7 @@ Step 2: Craft the Dockerfile
 
 1. Create a new file named `Dockerfile` -- note it has no file extension.
 
-2. Write `FROM node`.  This says "start with the node base-image".
+2. Write `FROM node` into the Dockerfile.  This says "start with the node base-image".
 
 3. Write `WORKDIR /app`.  This says "I want my process to start from the `/app` directory."
 
