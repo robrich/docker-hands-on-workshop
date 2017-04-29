@@ -112,8 +112,8 @@ Step 7: Change the code, rebuild, rerun
 6. Run a `docker container rm` command to remove the container.
 
 
-Step 8: Stretch goal - Windows Containers
------------------------------------------
+Step 8: Stretch goal (Windows only)
+-----------------------------------
 
 Running on a Windows machine?  Switch to Windows Containers, and modify your dockerfile to run a Windows workload.
 
