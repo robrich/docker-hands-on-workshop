@@ -34,6 +34,7 @@ namespace backend.Controllers
 
             int id = (int?)(
                 from d in FrameworkDataStore.Database
+                orderby d.Id descending
                 select d.Id
             ).FirstOrDefault() ?? 0;
 
