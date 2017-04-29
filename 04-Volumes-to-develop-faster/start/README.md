@@ -40,7 +40,7 @@ FROM nginx
 COPY . /usr/share/nginx/html
 ```
 
-2. Build the dockerfile into an image: `docker build -t nginxprod:0.1 -f Dockerfile-prod`
+2. Build the dockerfile into an image: `docker build -t nginxprod:0.1 -f Dockerfile-prod .`
 
 3. Windows only: Right-click on the Docker system tray icon, choose Settings, go to Shared Drives, and turn on sharing for each of your drives.
 
