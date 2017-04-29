@@ -30,3 +30,7 @@ Adding to Docker Hub
 4. Tag an image in the form `username/imagename:version`, so I would tag a node image as `robrich/node:0.1`.  Note the registry details are in the image name.  Sadly, this makes it difficult to move images between repositories or to build automation around changing repositories.
 
 5. `docker push username/imagename:version` substituting the details of the image you tagged above.
+
+6. `docker pull username/imagename:version` substituting the details of the image you tagged above.
+
+Note: By convention, docker hub uses the tag named `latest` when a version isn't specified.  If you push `0.1` and then pull `latest` you'll get unexpected results.
