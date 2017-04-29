@@ -39,7 +39,7 @@ Take the app we built in step 3 and build a `docker-compose.yml` file around it.
 
 11. Tidy up `frontend/routes/index.js`, noting that the back-end is now just `http://backend:5000`.
 
-12. To run the entire package together, run `docker-compose -d up`.  Like `docker run ...` the `-d` runs in daemon mode -- in the background.
+12. To run the entire package together, run `docker-compose up -d`.  Like `docker run ...` the `-d` runs in daemon mode -- in the background.
 
 13. Open a browser to [http://localhost:3000/](http://localhost:3000/) and start playing with your mesh of services.
 
