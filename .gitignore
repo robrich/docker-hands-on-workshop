@@ -5,3 +5,4 @@ obj
 .idea
 *.user
 *.orig
+.DS_Store
