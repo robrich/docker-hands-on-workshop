@@ -7,7 +7,11 @@ This section digs into volumes.  Volumes are durable storage.  Consider it a dir
 Setup
 -----
 
-1. Build the container: `docker build -t volumetest:0.1 .`
+1. Clone this repository.
+
+2. Open a terminal in this `03-Volumes-as-durable-storage/start` directory.
+
+3. Build the container: `docker build -t volumetest:0.1 .`
 
 
 The problem
@@ -47,7 +51,7 @@ The solution
 
 5. Create an empty folder to use as an upload location
 
-6. Run the new image: `docker run -p 3000:3000 -v /path/to/empty/folder:/app/public volumetest:0.2` swapping out your folder path.  If your folder path has spaces in it, you'll need quotes around this.
+6. Run the new image: `docker run -p 3000:3000 -v /path/to/empty/folder:/app/public -d volumetest:0.2` swapping out your folder path.  If your folder path has spaces in it, you'll need quotes around this.
 
 7. Upload a file on [http://localhost:3000/](http://localhost:3000/), and click [See files](http://localhost:3000/files) and see the file you uploaded.
 
