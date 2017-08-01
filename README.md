@@ -29,6 +29,10 @@ Windows requirements:
 - Windows 10 Anniversary Update or better
 - Access to your machine's BIOS to turn on virtualization
 
+Linux requirements:
+
+- 64-bit Linux these versions or better: Ubuntu 14.04, Debian 7.7, CentOS 7, or Fedora 24
+
 
 Other Resources
 ---------------

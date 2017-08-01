@@ -1,8 +1,21 @@
 Installing Docker Community Edition
 ===================================
 
-Mac
----
+Install Docker CE for your OS
+-----------------------------
+
+### Linux
+
+Follow the instructions on docs.docker.com for your OS:
+
+- Ubuntu: [https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/](https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/)
+- Debian: [https://docs.docker.com/engine/installation/linux/docker-ce/debian/](https://docs.docker.com/engine/installation/linux/docker-ce/debian/)
+- CentOS: [https://docs.docker.com/engine/installation/linux/docker-ce/centos/](https://docs.docker.com/engine/installation/linux/docker-ce/centos/)
+- Fedora: [https://docs.docker.com/engine/installation/linux/docker-ce/fedora/](https://docs.docker.com/engine/installation/linux/docker-ce/fedora/)
+- Other: [https://docs.docker.com/engine/installation/linux/docker-ce/binaries/](https://docs.docker.com/engine/installation/linux/docker-ce/binaries/)
+
+
+### Mac
 
 1. Visit [https://docs.docker.com/docker-for-mac/install/#what-to-know-before-you-install](https://docs.docker.com/docker-for-mac/install/#what-to-know-before-you-install) to ensure you have the requirements necessary.
 
@@ -11,8 +24,7 @@ Mac
 ![Mac Install](mac.png)
 
 
-Windows
--------
+### Windows
 
 1. Turn on virtualization in the bios.  Every bios is different, so you'll need to search for the specifics.
 
@@ -29,8 +41,7 @@ Windows
 5. Gratuitous reboots.
 
 
-Docker in a VMWare VM
----------------------
+### Docker in a VMWare VM
 
 See [this post](https://communities.vmware.com/thread/498837) to get a VMware Workstation virtual machine to run Docker.  This assumes you've enabled visualization on the host's bios so you can run VMware.
 
