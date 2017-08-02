@@ -27,9 +27,11 @@ The problem
 
 5. Stop the container with `docker container list` and `docker container stop ...` substituting the container name or id for `...`.
 
-6. Start the container again: `docker run -p 3000:3000 -d volumetest:0.1`
+6. Remove the container with `docker container rm ...` substituting the container name or id for `...`.
 
-7. Click on [See files](http://localhost:3000/files).
+7. Start the container again: `docker run -p 3000:3000 -d volumetest:0.1`
+
+8. Click on [See files](http://localhost:3000/files).
 
 The thin read/write container from the first run is now gone and a new read/write layer was created.  The uploaded data is gone.
 
@@ -51,7 +53,7 @@ The solution
 
 5. Create an empty folder to use as an upload location
 
-6. Run the new image: `docker run -p 3000:3000 -v /path/to/empty/folder:/app/public -d volumetest:0.2` swapping out your folder path.  If your folder path has spaces in it, you'll need quotes around this.
+6. Run the new image: `docker run -p 3000:3000 -v /path/to/empty/folder:/app/public -d volumetest:0.2` swapping out your folder path.  If your folder path has spaces in it, you'll need quotes around this.  For Windows, you can use forward or back slashes such as `... -v c:/temp:/app/public ...`.
 
 7. Upload a file on [http://localhost:3000/](http://localhost:3000/), and click [See files](http://localhost:3000/files) and see the file you uploaded.
 

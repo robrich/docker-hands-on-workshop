@@ -9,6 +9,6 @@ RUN dotnet build
 
 ENV ASPNETCORE_URLS http://+:5000
 EXPOSE 5000
-ENTRYPOINT ["dotnet", "run"]
+CMD ["dotnet", "run"]
 
 # Read more: https://jeremylindsayni.wordpress.com/2016/11/22/deploying-a-net-core-1-1-web-api-microservice-to-a-docker-container-in-windows/
