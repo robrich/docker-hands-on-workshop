@@ -117,7 +117,7 @@ Step 8: Stretch goal (Windows only)
 
 Running on a Windows machine?  Switch to Windows Containers, and modify your dockerfile to run a Windows workload.
 
-1. Change `FROM node` to `FROM stefanscherer/node-windows:7-nano`
+1. Change `FROM node` to `FROM stefanscherer/node-windows`
 
 2. Run a `docker build` command, setting a version tag.
 

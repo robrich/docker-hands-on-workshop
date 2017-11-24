@@ -1,4 +1,4 @@
-FROM stefanscherer/node-windows:7-nano
+FROM stefanscherer/node-windows
 WORKDIR /app
 COPY . /app
 EXPOSE 3000

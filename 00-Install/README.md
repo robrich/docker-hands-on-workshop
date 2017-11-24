@@ -43,7 +43,9 @@ Follow the instructions on docs.docker.com for your OS:
 
 ### Docker in a VMWare VM
 
-See [this post](https://communities.vmware.com/thread/498837) to get a VMware Workstation virtual machine to run Docker.  This assumes you've enabled visualization on the host's bios so you can run VMware.
+If you're installing Docker in a VMware Workstation VM, see [this post](https://communities.vmware.com/thread/498837) to get a VMware Workstation virtual machine to run Docker.  This assumes you've enabled visualization on the host's bios so you can run VMware.
+
+If you're not in a VM, use the instructions above.
 
 
 Verify it Works
@@ -65,16 +67,20 @@ Start downloading docker images
 
 Downloading docker images takes a while, so let's kick this off so we make sure they exist when we need them:
 
-1. `docker pull ubuntu`
-2. `docker pull nginx`
-3. `docker pull node`
-4. `docker pull microsoft/dotnet`
+1. `docker pull nginx`
+2. `docker pull node`
+3. `docker pull microsoft/aspnetcore:2`
+4. `docker pull microsoft/aspnetcore-build:2`
 
-If you're on a Windows machine, switch to Windows Containers by right-clicking the Docker icon in the system tray and choose "Switch to Windows Containers", then download these additional containers:
+If you're preparing for the conference from your hotel room or you're following this tutorial online, switch to Windows Containers by right-clicking the Docker icon in the system tray and choose "Switch to Windows Containers", then download these additional containers:
+
+**If you're in the room, don't download these windows containers as we'll kill the conference wifi**
 
 1. `docker pull microsoft/nanoserver`
-2. `docker pull stefanscherer/node-windows:7-nano`
-3. Switch back to Linux containers -- we'll begin with Linux workloads
+2. `docker pull stefanscherer/node-windows`
+3. `docker pull microsoft/aspnetcore:2`
+4. `docker pull microsoft/aspnetcore-build:2`
+5. Switch back to Linux containers -- we'll begin with Linux workloads
 
 ![Switch to Windows Containers](switch-to-windows.png)
 
