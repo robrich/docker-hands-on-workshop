@@ -41,7 +41,7 @@ In most circumstances this is what we want -- we want isolated runtime environme
 The solution
 ------------
 
-1. Windows only: Right-click on the Docker system tray icon, choose Settings, go to Shared Drives, and turn on sharing for each of your drives.
+1. Windows only: Right-click on the Docker system tray icon, choose Settings, go to Shared Drives, and turn on sharing for each of your drives.  This shares your host drive with the MobyLinux VM.  On Linux, there is no MobyLinux VM, and on Mac, `/Users` is already shared, so you probably don't need to do this.
 
 ![Windows: Turn on Shared Drives](shared-drives.png)
 

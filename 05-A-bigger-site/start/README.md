@@ -3,6 +3,8 @@ A bigger site
 
 Build a more real-world app that consumes external resources.
 
+Choose from one of these two options to explore making http calls between containers:
+
 
 Option 1: Build your app
 ------------------------
