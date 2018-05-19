@@ -6,3 +6,4 @@ obj
 *.user
 *.orig
 .DS_Store
+package-lock.json
