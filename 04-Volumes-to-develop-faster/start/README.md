@@ -17,7 +17,7 @@ Run a prebuilt Nginx image
 
 4. `docker run -v /path/to/folder:/usr/share/nginx/html -p 8080:80 -d nginx` swapping out `/path/to/folder` with the folder you created in step 2.  This runs the nginx image, mapping the current folder into the container, and mapping port `8080` outside the container to port `80` inside the container.  (If you're already using port 8080, choose any free port.  Browse to this port in step 2 as well.)
 
-4. Browse to [http://localhost:8080](http://localhost:8080).  Welcome to a 404.
+4. Browse to [http://localhost:8080](http://localhost:8080).  Welcome to a 404 or 403.  This is ok, it has no files to serve.
 
 
 Edit files
@@ -39,7 +39,7 @@ Let's solve this by creating a production container:
 Craft a Dockerfile
 ------------------
 
-1. Write this into a file named `Dockerfile-prod` (no extension):
+1. From the content folder you created above, create a file named `Dockerfile-prod` (no extension) and write this content:
 
 ```
 FROM nginx

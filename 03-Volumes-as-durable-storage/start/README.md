@@ -37,6 +37,8 @@ The thin read/write container from the first run is now gone and a new read/writ
 
 In most circumstances this is what we want -- we want isolated runtime environments where nothing changes and we can easily kill it off and start another.  In this case, we want a durable data store.  Let's experiment with volumes.
 
+9. Stop the docker container.  As we build the solution, we'll launch the new image on port 3000, and we want to avoid a port conflict.
+
 
 The solution
 ------------

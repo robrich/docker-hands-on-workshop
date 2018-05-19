@@ -1,4 +1,4 @@
-FROM microsoft/aspnetcore-build:2
+FROM microsoft/aspnetcore-build:2.0
 
 WORKDIR /app
 COPY backend.csproj .

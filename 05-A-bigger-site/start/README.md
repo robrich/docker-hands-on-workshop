@@ -30,7 +30,7 @@ I have here a .net core back-end and a node front-end.  Use my app, and build an
 
 3. `docker build ...` the back-end container.
 
-4. `docker run ...` the back-end container.
+4. `docker run ...` the back-end container, directing traffic to port 5000.
 
 5. Run `docker container list` and note the container id or name of the back-end container.
 
@@ -40,7 +40,7 @@ I have here a .net core back-end and a node front-end.  Use my app, and build an
 
 8. `docker build ...` the front-end container.
 
-9. `docker run ...` the front-end container.
+9. `docker run ...` the front-end container, directing traffic to port 3000.
 
 10. Visit [http://localhost:3000/](http://localhost:3000/) to cast your vote.
 
