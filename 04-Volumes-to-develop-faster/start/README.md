@@ -7,7 +7,7 @@ Volumes can help us develop content faster.  We create a volume for the current 
 Run a prebuilt Nginx image
 --------------------------
 
-1. `docker pull nginx`  You can learn more about this image from [Docker Hub](https://hub.docker.com/_/nginx/) and view the [Dockerfile](https://github.com/nginxinc/docker-nginx/blob/0c7611139f2ce7c5a6b1febbfd5b436c8c7d2d53/mainline/jessie/Dockerfile) used to create it.
+1. `docker pull nginx:alpine`  You can learn more about this image from [Docker Hub](https://hub.docker.com/_/nginx/) and view the [Dockerfile](https://github.com/nginxinc/docker-nginx/blob/590f9ba27d6d11da346440682891bee6694245f5/mainline/alpine/Dockerfile) used to create it.
 
 2. Create a blank folder in a conspicuous spot.  Note that you must avoid paths with dashes, and it's best to avoid paths with spaces.
 
@@ -15,7 +15,7 @@ Run a prebuilt Nginx image
 
 ![Windows: Turn on Shared Drives](shared-drives.png)
 
-4. `docker run -v /path/to/folder:/usr/share/nginx/html -p 8080:80 -d nginx` swapping out `/path/to/folder` with the folder you created in step 2.  This runs the nginx image, mapping the current folder into the container, and mapping port `8080` outside the container to port `80` inside the container.  (If you're already using port 8080, choose any free port.  Browse to this port in step 2 as well.)
+4. `docker run -v /path/to/folder:/usr/share/nginx/html -p 8080:80 -d nginx:alpine` swapping out `/path/to/folder` with the folder you created in step 2.  This runs the nginx image based on the alpine linux distribution, mapping the current folder into the container, and mapping port `8080` outside the container to port `80` inside the container.  (If you're already using port 8080, choose any free port.  Browse to this port in step 2 as well.)
 
 4. Browse to [http://localhost:8080](http://localhost:8080).  Welcome to a 404 or 403.  This is ok, it has no files to serve.
 

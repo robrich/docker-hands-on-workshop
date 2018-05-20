@@ -8,6 +8,6 @@ RUN npm install
 COPY . /app
 
 EXPOSE 3000
-VOLUME ["/app/public", "/app/node-modules"]
+VOLUME ["/app/public"]
 
 CMD ["node", "server"]

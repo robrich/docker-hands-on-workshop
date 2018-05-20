@@ -67,19 +67,19 @@ Start downloading docker images
 
 Downloading docker images takes a while, so let's kick this off so we make sure they exist when we need them:
 
-1. `docker pull nginx`
+1. `docker pull nginx:alpine`
 2. `docker pull node`
-3. `docker pull microsoft/aspnetcore:2`
-4. `docker pull microsoft/aspnetcore-build:2`
+3. `docker pull microsoft/aspnetcore:2.0`
+4. `docker pull microsoft/aspnetcore-build:2.0`
 
 If you're preparing for the conference from your hotel room or you're following this tutorial online, switch to Windows Containers by right-clicking the Docker icon in the system tray and choose "Switch to Windows Containers", then download these additional containers:
 
 **If you're in the room, don't download these windows containers as we'll kill the conference wifi**
 
-1. `docker pull microsoft/nanoserver`
+1. `docker pull microsoft/nanoserver:1803`
 2. `docker pull stefanscherer/node-windows`
-3. `docker pull microsoft/aspnetcore:2`
-4. `docker pull microsoft/aspnetcore-build:2`
+3. `docker pull microsoft/aspnetcore:2.0`
+4. `docker pull microsoft/aspnetcore-build:2.0`
 5. Switch back to Linux containers -- we'll begin with Linux workloads
 
 ![Switch to Windows Containers](switch-to-windows.png)
