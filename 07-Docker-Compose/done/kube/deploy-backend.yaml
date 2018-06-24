@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+        version: '1'
+    spec:
+      containers:
+      - name: backend
+        image: backend
+        # `:latest` sets `imagePullPolicy: Always`, see https://stackoverflow.com/a/40820253
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 5000

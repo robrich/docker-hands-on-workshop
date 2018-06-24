@@ -19,7 +19,9 @@ Follow the instructions on docs.docker.com for your OS:
 
 1. Visit [https://docs.docker.com/docker-for-mac/install/#what-to-know-before-you-install](https://docs.docker.com/docker-for-mac/install/#what-to-know-before-you-install) to ensure you have the requirements necessary.
 
-2. Download [Docker Community Edition](https://store.docker.com/search?offering=community&type=edition) and install as you would any Mac app.
+2. Visit the [Docker Store](https://store.docker.com/) and create an account.
+
+3. Download [Docker Community Edition](https://store.docker.com/search?offering=community&type=edition) and install as you would any Mac app.
 
 ![Mac Install](mac.png)
 
@@ -36,16 +38,20 @@ Follow the instructions on docs.docker.com for your OS:
 
 3. From the same dialog, also turn on Containers.
 
-4. Download [Docker Community Edition](https://store.docker.com/search?offering=community&type=edition) and install as you would any Windows app.
+4. Visit the [Docker Store](https://store.docker.com/) and create an account.
 
-5. Gratuitous reboots.
+5. Download [Docker Community Edition](https://store.docker.com/search?offering=community&type=edition) and install as you would any Windows app.
+
+6. Gratuitous reboots.
 
 
-### Docker in a VMWare VM
+### Docker in a VM
 
-If you're installing Docker in a VMware Workstation VM, see [this post](https://communities.vmware.com/thread/498837) to get a VMware Workstation virtual machine to run Docker.  This assumes you've enabled visualization on the host's bios so you can run VMware.
+If you're installing Docker in a VMware Workstation VM, see [this post](https://communities.vmware.com/thread/498837) to get a VMware Workstation virtual machine to run Docker.  This assumes you've enabled virtualization on the host's bios so you can run VMware.
 
-If you're not in a VM, use the instructions above.
+If you're installing Docker in a Windows VM running inside Parallels on your mac, see [this post](http://tattoocoder.com/configure-docker-for-windows-under-parallels/) to configure Parallels for nested virtualization.
+
+If you're not in a VM, you can skip this section.
 
 
 Verify it Works
@@ -68,18 +74,18 @@ Start downloading docker images
 Downloading docker images takes a while, so let's kick this off so we make sure they exist when we need them:
 
 1. `docker pull nginx:alpine`
-2. `docker pull node`
-3. `docker pull microsoft/aspnetcore:2.0`
-4. `docker pull microsoft/aspnetcore-build:2.0`
+2. `docker pull node:alpine`
+3. `docker pull microsoft/dotnet:2.1-aspnetcore-runtime-alpine`
+4. `docker pull microsoft/dotnet:2.1-sdk-alpine`
 
-If you're preparing for the conference from your hotel room or you're following this tutorial online, switch to Windows Containers by right-clicking the Docker icon in the system tray and choose "Switch to Windows Containers", then download these additional containers:
+**Windows only:** If you're preparing for the conference from your hotel room or you're following this tutorial online, switch to Windows Containers by right-clicking the Docker icon in the system tray and choose "Switch to Windows Containers", then download these additional containers:
 
 **If you're in the room, don't download these windows containers as we'll kill the conference wifi**
 
 1. `docker pull microsoft/nanoserver:1803`
 2. `docker pull stefanscherer/node-windows`
-3. `docker pull microsoft/aspnetcore:2.0`
-4. `docker pull microsoft/aspnetcore-build:2.0`
+3. `docker pull microsoft/dotnet:2.1-aspnetcore-runtime`
+4. `docker pull microsoft/dotnet:2.1-sdk`
 5. Switch back to Linux containers -- we'll begin with Linux workloads
 
 ![Switch to Windows Containers](switch-to-windows.png)
