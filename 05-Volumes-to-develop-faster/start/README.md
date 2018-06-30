@@ -42,7 +42,7 @@ Craft a Dockerfile
 1. From the content folder you created above, create a file named `Dockerfile-prod` (no extension) and write this content:
 
    ```
-   FROM nginx
+   FROM nginx:alpine
    COPY . /usr/share/nginx/html
    ```
 

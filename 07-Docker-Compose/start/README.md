@@ -96,7 +96,7 @@ Take the app we built in step `06: A bigger Site` and build a `docker-compose.ym
     const BACKEND = 'http://backend:5000';
     ```
 
-12. To run the entire package together, run:
+12. To run the entire package together, from a terminal run:
 
     ```
     docker-compose up -d

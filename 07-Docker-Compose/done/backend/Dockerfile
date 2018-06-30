@@ -1,12 +1,21 @@
-FROM microsoft/aspnetcore-build:2.0
+FROM microsoft/dotnet:2.1-sdk-alpine AS build
 
-WORKDIR /app
-COPY backend.csproj .
-RUN dotnet restore
+WORKDIR /src
 
-COPY . /app
-RUN dotnet build
+COPY MultiStage.csproj .
+RUN dotnet restore backend.csproj
+
+COPY . .
+RUN dotnet build backend.csproj -c Release
+RUN dotnet publish backend.csproj -c Release -o /app
+
+
+FROM microsoft/dotnet:2.1-aspnetcore-runtime-alpine
 
 ENV ASPNETCORE_URLS http://+:5000
 EXPOSE 5000
-CMD ["dotnet", "run"]
+
+WORKDIR /app
+COPY --from=build /app .
+
+ENTRYPOINT ["dotnet", "backend.dll"]
