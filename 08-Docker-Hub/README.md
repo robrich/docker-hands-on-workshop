@@ -81,12 +81,12 @@ Adding to Azure Container Registry - a Private Docker Hub
 5. From the command-line, run
 
    ```
-   docker login https://MY_REGISTRY_NAME.azurecr.io
+   docker login MY_REGISTRY_NAME.azurecr.io
    ```
 
    Substitute `MY_REGISTRY_NAME` with the name of your Azure Container Registry.
 
-5. Tag an image in the form `registryname.azurecr.io/imagename:version`, so I would tag a node image as `robrich.azurecr.io/backend:0.1`.  Note the registry details are in the image name.  Sadly, this makes it difficult to move images between repositories or to build automation around changing repositories.
+5. Tag an image in the form `registryname.azurecr.io/imagename:version`, so I would tag a node image as `robrich.azurecr.io/backend:0.1`.
 
    ```
    docker tag backend:0.1 MY_REGISTRY_NAME.azurecr.io/backend:0.1
@@ -94,21 +94,15 @@ Adding to Azure Container Registry - a Private Docker Hub
 
    Substitute your registry name.
 
-5. `docker push username/imagename:version` will push new images to Docker hub.
+   Note the registry details are in the image name.  Sadly, this makes it difficult to move images between repositories or to locally cache external repositories.
+
+6. `docker push registry.url/imagename:version` will push new images to Docker hub.
 
    ```
    docker push MY_REGISTRY_NAME.azurecr.io/backend:0.1
    ```
 
    Substitute the details of the image you tagged above.
-
-6. Now that your image is on Docker hub, you could delete the image, and grab it again using:
-
-   ```
-   docker pull MY_REGISTRY_NAME.azurecr.io/backend:0.1
-   ```
-
-   Substitute the details of the image you tagged above.  Because you already have it locally, it'll successfully do nothing.
 
 7. Docker uses the tag `latest` when a version isn't specified, but this tag is no different than any other tag.  Let's tag the image as `latest` and push that one too.
 
@@ -118,3 +112,11 @@ Adding to Azure Container Registry - a Private Docker Hub
    docker tag backend:0.1 MY_REGISTRY_NAME.azurecr.io/backend
    docker push MY_REGISTRY_NAME.azurecr.io/backend
    ```
+
+8. Now that your image is on Docker hub, you could delete the image, and grab it again using:
+
+   ```
+   docker pull MY_REGISTRY_NAME.azurecr.io/backend:0.1
+   ```
+
+   Substitute the details of the image you tagged above.  Because you already have it locally, it'll successfully do nothing.
