@@ -36,7 +36,7 @@ Frontend
 
 2. Open `frontend/Dockerfile`
 
-3. Modify the file to build the node app.  I've listed the shell commands you'll need to run.  Turn these into `Dockerfile` commands.
+3. Modify the file to build the node app.  I've listed the shell commands you'll need to run.  Turn these into `Dockerfile` commands.  Look to exercise 2 for clues if necessary.
 
 4. Build the front-end image, tagging it as `frontend:0.1`.
 
