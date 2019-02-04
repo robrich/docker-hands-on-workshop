@@ -9,7 +9,7 @@ Setup
 
 1. Clone this repository.
 
-2. Open a terminal in this `03-Volumes-as-durable-storage/start` directory.
+2. Open a terminal in this `04-Volumes-as-durable-storage/start` directory.
 
 3. Build the container: `docker build -t volumetest:0.1 .`
 
