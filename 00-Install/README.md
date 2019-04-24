@@ -1,8 +1,8 @@
 Installing Docker Community Edition
 ===================================
 
-Install Docker CE for your OS
------------------------------
+Install Docker Desktop for your OS
+----------------------------------
 
 ### Linux
 
@@ -21,7 +21,7 @@ Follow the instructions on docs.docker.com for your OS:
 
 2. Visit the [Docker Store](https://store.docker.com/) and create an account.
 
-3. Download [Docker Community Edition](https://store.docker.com/search?offering=community&type=edition) and install as you would any Mac app.
+3. Download [Docker Desktop Community Edition](https://hub.docker.com/search/?offering=community&type=edition) for Mac and install as you would any Mac app.
 
 ![Mac Install](mac.png)
 
@@ -40,7 +40,9 @@ Follow the instructions on docs.docker.com for your OS:
 
 4. Visit the [Docker Store](https://store.docker.com/) and create an account.
 
-5. Download [Docker Community Edition](https://store.docker.com/search?offering=community&type=edition) and install as you would any Windows app.
+5. Download [Docker Desktop Community Edition](https://hub.docker.com/search/?offering=community&type=edition) for Windows and install as you would any Windows app.
+
+6. When prompted, choose to start with `Linux Containers`.
 
 6. Gratuitous reboots.
 
