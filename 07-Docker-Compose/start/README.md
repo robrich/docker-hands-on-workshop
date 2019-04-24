@@ -9,7 +9,7 @@ In a `docker-compose.yml` file we can specify both the `docker build` and `docke
 Build Docker compose file
 -------------------------
 
-Take the app we built in step `06: A bigger Site` and build a `docker-compose.yml` file around it.
+We're going to add to the app we built in step `06: A bigger Site` a `docker-compose.yml` file that will launch many things.
 
 **Note:** Yaml files are white-space significant.  Indenting is done with **2 spaces**, not 4 spaces, not tabs.
 
