@@ -7,7 +7,7 @@ In Node, we deploy our source.  In .NET Core, we build first, and deploy built a
 Step 1: Build the Dockerfile
 ----------------------------
 
-1. Create a new file named `Dockerfile` inside the `src` directory.
+1. Create a new file named `Dockerfile` inside the `src` directory. If you haven't yet cloned this repository, you'll need the content from https://github.com/robrich/docker-hands-on-workshop/tree/master/03-Multi-stage-build/start/src folder (the `src` directory next to this README.md file).
 
 2. Add the line
 
@@ -174,6 +174,8 @@ Step 5: Stop and Remove the container
 
 Step 6: Modify the Dockerfile to be multi-stage
 -----------------------------------------------
+
+What is a multi-stage build?  We're going to build two images: one is like the build server, one is like the production server. The first stage will take in our source code and output the built dlls, the second will host the built dlls as a web server.
 
 1. Open the `Dockerfile` you created in step 1.
 
