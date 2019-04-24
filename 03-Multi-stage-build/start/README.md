@@ -185,7 +185,7 @@ What is a multi-stage build?  We're going to build two images: one is like the b
    FROM microsoft/dotnet:2.1-aspnetcore-runtime-alpine
    ```
 
-   We've started a new section -- a second build stage.  This base image is the .NET Core runtime -- it doesn't include the build tools, so it's much smaller.
+   We've started a new section -- a second build stage.  We'll build a second image.  This base image is the .NET Core runtime -- it doesn't include the build tools, so it's much smaller.
 
 3. Add this line after the `WORKDIR /app` and before the `ENV ASPNETCORE_...` line:
 
