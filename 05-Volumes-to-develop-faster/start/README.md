@@ -11,7 +11,7 @@ Run a prebuilt Nginx image
 
 2. Create a blank folder in a convinient location such as `C:/temp` or `~/temp`.  Note that you must avoid paths with dashes, and it's best to avoid paths with spaces.
 
-3. Windows only: Right-click on the Docker system tray icon, choose Settings, go to Shared Drives, and turn on sharing for each of your drives.  This shares your host drive with the MobyLinux VM.  On Linux, there is no MobyLinux VM, and on Mac, `/Users` is already shared, so you probably don't need to do this.
+3. Windows only: Right-click on the Docker system tray icon, choose Settings, go to Shared Drives, and turn on sharing for each of your drives.  This shares your host drive with the Docker Desktop VM.  On Linux, there is no Docker VM, and on Mac, `/Users` is already shared, so you probably don't need to do this.
 
 ![Windows: Turn on Shared Drives](shared-drives.png)
 

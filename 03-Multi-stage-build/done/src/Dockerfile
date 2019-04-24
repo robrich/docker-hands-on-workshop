@@ -18,4 +18,4 @@ EXPOSE 5000
 WORKDIR /app
 COPY --from=build /app .
 
-ENTRYPOINT ["dotnet", "MultiStage.dll"]
+CMD ["dotnet", "MultiStage.dll"]

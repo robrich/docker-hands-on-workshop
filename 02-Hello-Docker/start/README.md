@@ -39,13 +39,13 @@ Step 2: Craft the Dockerfile
 
    **Pro tip:** Rather than copying and pasting the text, type each step instead.  You'll become much more familiar with the new technology this way.
    
-3. Add this line:
+3. Add this line to set the current directory inside the image:
 
    ```
    WORKDIR /app
    ```
 
-   This says "I want my process to start from the `/app` directory."  It will create the directory if it doesn't exist.
+   This says "I want my process to start from the `/app` directory."  It will create the directory if it doesn't exist. This is the directory inside the image.
 
 4. Next line:
 

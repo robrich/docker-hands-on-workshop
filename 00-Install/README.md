@@ -1,5 +1,5 @@
-Installing Docker Community Edition
-===================================
+Installing Docker Desktop Community Edition
+===========================================
 
 Install Docker Desktop for your OS
 ----------------------------------
