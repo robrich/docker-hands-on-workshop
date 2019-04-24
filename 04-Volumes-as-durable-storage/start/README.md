@@ -45,6 +45,8 @@ The solution
 
 1. Open Docker settings (Click on the whale by the clock), choose Settings, go to Shared Drives, and turn on sharing for the drive / folder your code is in.  This shares your host drive with the Docker Desktop VM.  On Linux, there is no Docker VM, and on Mac, `/Users` may already be shared.
 
+   NOTE: You may need to configure your firewall to allow this SMB share from the Docker Desktop VM into your computer.
+
 ![Turn on Shared Drives](shared-drives.png)
 
 2. Modify `Dockerfile`
@@ -55,7 +57,7 @@ The solution
 
 5. Create an empty folder to use as an upload location
 
-6. Run the new image: `docker run -p 3000:3000 -v /path/to/empty/folder:/app/public -d volumetest:0.2` swapping out your folder path.  If your folder path has spaces in it, you'll need quotes around this.  For Windows, you can use forward or back slashes such as `... -v c:/temp:/app/public ...`.
+6. Run the new image: `docker run -p 3000:3000 -v /path/to/empty/folder:/app/public -d volumetest:0.2` swapping out your folder path -- case sensitive.  If your folder path has spaces in it, you'll need quotes around this.  For Windows, you can use 1 forward or 2 back slashes such as `... -v c:/temp:/app/public ...`.
 
 7. Upload a file on [http://localhost:3000/](http://localhost:3000/), and click [See files](http://localhost:3000/files) and see the file you uploaded.
 
@@ -65,6 +67,4 @@ The solution
 
 10. Click on [See files](http://localhost:3000/files) and see the file(s) uploaded previously.
 
-Note: volume links can be a full path or a `.` meaning "the current directory".  In this case the current directory had lots of things in it, so we specified another folder.
-
-Note: if you leave off the public side of the volume switch (the `/path/on/host:` part), Docker will manage the volume for you, storing it in the MobyLinux VM.
+Note: if you leave off the public side of the volume switch (the `/path/on/host:` part), Docker will manage the volume for you, storing it in the Docker Desktop VM.
