@@ -166,7 +166,7 @@ Step 7: Change the code, rebuild, rerun
 
 1. Modify `server.js` to change `Hello World` to say something else interesting.
 
-2. Run a `docker build` command, changing the version tag.
+2. Run a `docker build` command, changing the version label to `0.2`.
 
 3. Run a `docker run` command to start the container.
 

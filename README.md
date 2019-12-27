@@ -7,7 +7,7 @@ Welcome to the Docker Hands-on workshop.
 Our Goals
 ---------
 
-1. Get [`docker` desktop community edition](https://www.docker.com/get-started) running on your machine.
+1. Get [Docker Desktop](https://hub.docker.com/search?q=community&type=edition&offering=community) running on your machine in Kubernetes mode.
 
 2. Teach you the skills to leverage Docker in your environment today.
 

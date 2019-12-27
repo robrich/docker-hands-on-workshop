@@ -12,10 +12,10 @@ Step 1: Build the Dockerfile
 2. Add the line
 
    ```
-   FROM microsoft/dotnet:2.1-sdk-alpine
+   FROM mcr.microsoft.com/dotnet/core/sdk:3.1-alpine
    ```
 
-   This says "start with the [.net build tools](https://hub.docker.com/r/microsoft/dotnet/) base image, and use the alpine flavor of it."  The alpine linux distribution is known for being really tiny.
+   This says "start with the [.net build tools](https://hub.docker.com/_/microsoft-dotnet-core-sdk/) base image, and use the alpine flavor of it."  The alpine linux distribution is known for being really tiny.
 
 3. Add the line:
 
@@ -23,7 +23,7 @@ Step 1: Build the Dockerfile
    WORKDIR /src
    ```
 
-   This says "I want my process to start from the `/src` directory."  It will create the directory if it doesn't exist.
+   This says "I want my process in the container to start from the `/src` directory."  It will create the directory if it doesn't exist.
 
 4. Next line:
 
@@ -51,7 +51,7 @@ Step 1: Build the Dockerfile
 
    This copies all the rest of the content from the current directory on our machine into the current directory in the image.
 
-7. Open the `.dockerignore` text file insode the `src` directory.  The syntax is identical to a `.gitignore` file.  This file tells the `COPY` command which things it should not copy.
+7. Open the `.dockerignore` text file inside the `src` directory.  The syntax is identical to a `.gitignore` file.  This file tells the `COPY` command which things it should not copy.
 
    If you don't have a `.dockerignore` file, it'll use the `.gitignore` file instead.  If it doesn't find either, it'll copy everything.
 
@@ -182,7 +182,7 @@ What is a multi-stage build?  We're going to build two images: one is like the b
 2. Add this line after the `RUN dotnet publish ...` line and before the `WORKDIR /app` line:
 
    ```
-   FROM microsoft/dotnet:2.1-aspnetcore-runtime-alpine
+   FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-alpine
    ```
 
    We've started a new section -- a second build stage.  We'll build a second image.  This base image is the .NET Core runtime -- it doesn't include the build tools, so it's much smaller.
@@ -195,10 +195,10 @@ What is a multi-stage build?  We're going to build two images: one is like the b
 
    This line is different from the other copy lines we've written.  This doesn't copy from our computer, it copies from the image stage named `build`.  But `build` doesn't exist yet.
 
-4. At the top of the file, change the `FROM microsoft/dotnet:2.1-sdk-alpine` to this:
+4. At the top of the file, change the `FROM mcr.microsoft.com/dotnet/core/sdk:3.1-alpine` to this:
 
    ```
-   FROM microsoft/dotnet:2.1-sdk-alpine AS build
+   FROM mcr.microsoft.com/dotnet/core/sdk:3.1-alpine AS build
    ```
 
    We've now named the top section, so the `COPY --from=build ...` knows where to get the content.

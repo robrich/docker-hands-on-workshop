@@ -8,22 +8,20 @@ Install Docker Desktop for your OS
 
 Follow the instructions on docs.docker.com for your OS:
 
-- Ubuntu: [https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/](https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/)
-- Debian: [https://docs.docker.com/engine/installation/linux/docker-ce/debian/](https://docs.docker.com/engine/installation/linux/docker-ce/debian/)
-- CentOS: [https://docs.docker.com/engine/installation/linux/docker-ce/centos/](https://docs.docker.com/engine/installation/linux/docker-ce/centos/)
-- Fedora: [https://docs.docker.com/engine/installation/linux/docker-ce/fedora/](https://docs.docker.com/engine/installation/linux/docker-ce/fedora/)
-- Other: [https://docs.docker.com/engine/installation/linux/docker-ce/binaries/](https://docs.docker.com/engine/installation/linux/docker-ce/binaries/)
+- Ubuntu: https://docs.docker.com/install/linux/docker-ce/ubuntu/
+- Debian: https://docs.docker.com/install/linux/docker-ce/debian/
+- CentOS: https://docs.docker.com/install/linux/docker-ce/centos/
+- Fedora: https://docs.docker.com/install/linux/docker-ce/fedora/
+- Other: https://docs.docker.com/install/linux/docker-ce/binaries/
 
 
 ### Mac
 
 1. Visit [https://docs.docker.com/docker-for-mac/install/#what-to-know-before-you-install](https://docs.docker.com/docker-for-mac/install/#what-to-know-before-you-install) to ensure you have the requirements necessary.
 
-2. Visit the [Docker Store](https://store.docker.com/) and create an account.
+2. Download [Docker Desktop](https://hub.docker.com/editions/community/docker-ce-desktop-mac) (either Edge or Stable) and install as you would any Mac app. It'll invite you to create a free account to download.
 
-3. Download [Docker Desktop Community Edition](https://hub.docker.com/search/?offering=community&type=edition) for Mac and install as you would any Mac app.
-
-![Mac Install](mac.png)
+   ![Mac Install](mac.png)
 
 
 ### Windows
@@ -38,11 +36,9 @@ Follow the instructions on docs.docker.com for your OS:
 
 3. From the same dialog, also turn on Containers.
 
-4. Visit the [Docker Store](https://store.docker.com/) and create an account.
+4. Download [Docker Desktop for Windows](https://hub.docker.com/editions/community/docker-ce-desktop-windows) (either Edge or Stable) and install as you would any Windows app.  It'll invite you to create a free account to download.
 
-5. Download [Docker Desktop Community Edition](https://hub.docker.com/search/?offering=community&type=edition) for Windows and install as you would any Windows app.
-
-6. When prompted, choose to start with `Linux Containers`.
+5. Carefully pick "Linux Containers mode" when prompted.
 
 6. Gratuitous reboots.
 
@@ -103,8 +99,8 @@ Downloading docker images takes a while, so let's kick this off so we make sure 
 
 1. `docker pull nginx:alpine`
 2. `docker pull node:alpine`
-3. `docker pull microsoft/dotnet:2.1-aspnetcore-runtime-alpine`
-4. `docker pull microsoft/dotnet:2.1-sdk-alpine`
+3. `docker pull mcr.microsoft.com/dotnet/core/sdk:3.1-alpine`
+4. `docker pull mcr.microsoft.com/dotnet/core/aspnet:3.1-alpine`
 
 **Windows only:** If you're preparing for the conference from your hotel room or you're following this tutorial online, switch to Windows Containers by right-clicking the Docker icon in the system tray and choose "Switch to Windows Containers", then download these additional containers:
 
@@ -121,4 +117,4 @@ Downloading docker images takes a while, so let's kick this off so we make sure 
 Help your neighbor
 ------------------
 
-There's someone sitting next to you whose struggling with this.  Let's pair and help each other.  When that machine is running, let's all celebrate and join another team.  At the end, we'll celebrate around the last machine.
+There's someone sitting next to you who's struggling with this.  Let's pair and help each other.  When that machine is running, let's all celebrate and join another team.  At the end, we'll celebrate around the last machine.
